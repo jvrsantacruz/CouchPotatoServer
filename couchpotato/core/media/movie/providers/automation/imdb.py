@@ -128,8 +128,8 @@ class IMDBWatchlist(IMDBBase):
 
                     log.debug('Found %s movies on %s', (len(imdbs), w_url))
 
-                    if len(imdbs) < 225:
-                        break
+                    #if len(imdbs) < 225:
+                    break
 
                     start = len(movies)
 
