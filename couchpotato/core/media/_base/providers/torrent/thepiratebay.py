@@ -63,7 +63,8 @@ class Base(TorrentMagnetProvider):
             if data:
                 try:
                     soup = BeautifulSoup(data)
-                    results_table = soup.find('table', attrs = {'id': 'searchResult'})
+                    results_div = soup.find('div', attrs={'id': 'SearchResults'})
+                    results_table = results_div.find('table', attrs = {'id': 'searchResult'})
 
                     if not results_table:
                         return
